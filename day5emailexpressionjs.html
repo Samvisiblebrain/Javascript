@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation</title>
+    <style>
+        form {
+            text-align: center;
+            color: blue;
+        }
+        input {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" name="Subscribe" onsubmit="return validateEmail()">
+        <label for="email">Email</label>
+        <input type="text" name="nm">
+        <input type="submit" name="Submit" value="Submit">
+    </form>
+    
+    <script>
+    function validateEmail() {
+        var kuku = document.Subscribe.nm.value; 
+        var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        
+        if (emailPattern.test(kuku)) {  
+            alert("Email is ok");
+            return true;
+        } else {
+            alert("Email is not valid");
+            return false; 
+        }
+    }
+    </script>
+    
+    
+</body>
+</html>

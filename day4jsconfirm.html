@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm in JS Delete and Cancel</title>
+</head>
+<body>
+    <button onclick="Delete()">Delete</button>
+</body>
+    <script>
+        // Confirm ok=1 cancel=0
+        function Delete(){
+           var del= confirm("Are you sure, want to delete?");
+           if(del==1){
+            alert("Delete Successfully");
+           }
+           else{
+            alert("process Cancel");
+           }
+            }
+    </script>
+</html>

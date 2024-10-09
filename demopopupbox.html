@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post" name="login">
+        <label for="name">username</label>
+        <input type="text" name="nm">
+        <label for="password">Password</label>
+        <input type="password" name="ps">
+        <input type="submit" name="button" onclick="validatename()">
+    </form>
+    <script>
+        function validatename (){
+        var login = document.login.nm.value;
+        if (login==""){
+            alert ("Please enter name");
+        }
+        var pas=document.login.ps.value;
+            if (pas==""){
+                alert("Tu rhne de")
+            }
+
+        }
+
+        
+
+    </script>
+</body>
+</html>
