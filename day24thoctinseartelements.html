@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="one">
+        Append
+    </div>
+    <div id="two">
+        Prepend
+    </div>
+
+    <div id="three">
+        Before
+    </div>
+    <div id="Four">
+        After
+    </div>
+    <script>
+
+    let newbtn= document.createElement("button");
+            newbtn.innerText="Click Me";
+            console.log(newbtn);
+
+            let div1=document.querySelector("#one");
+            div1.append(newbtn);
+    </script>
+    <script>
+            let newbt= document.createElement("button");
+            newbt.innerText="Click Me";
+            console.log(newbt);
+
+            let div2=document.querySelector("#two");
+            div2.prepend(newbt);
+    </script>
+        <script>
+            let newkl= document.createElement("button");
+            newkl.innerText="Click Me";
+            console.log(newkl);
+
+            let div3=document.querySelector("#three");
+            div3.before(newkl);
+    </script>
+
+    <script>
+        let oney= document.createElement("button");
+        oney.innerText="Click Me";
+        console.log(oney);
+
+        let div4=document.querySelector("#Four");
+        div4.before(oney);
+        oney.remove();
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form with Text Applicator and Table</title>
+</head>
+<body>
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="class">Class:</label>
+        <input type="text" id="class" name="class"><br>
+
+        <label for="rollNo">Roll No:</label>
+        <input type="text" id="rollNo" name="rollNo"><br>
+
+        <button type="button" onclick="filltext()">Apply Text</button>
+    </form>
+    <script>
+        function filltext() {
+            const form = document.getElementById("myForm");
+            const nameField = form.elements["name"];
+            const classField = form.elements["class"];
+            const rollNoField = form.elements["rollNo"];
+        }
+    </script>
+</body>
+</html>
