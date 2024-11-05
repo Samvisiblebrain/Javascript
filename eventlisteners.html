@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listeners</title>
+    <style>
+        div{
+            border: 2px solid black;
+            height: 100px;
+            width: 100px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+
+    </div>
+    <script>
+        var btn = document.querySelector("div");
+        btn.addEventListener("click", (evt)=>{
+            console.log("evt listner");
+        });
+
+        btn.addEventListener("click", ()=>{
+            console.log("evt listner2");
+        });
+
+        btn.addEventListener("click", ()=>{
+            console.log("evt listner3");
+        });
+       
+
+        const handler3  = ()=>{
+            console.log("Event Listener4");
+        }
+        btn.addEventListener("click", handler3);
+        btn.removeEventListener("click", handler3);
+
+
+    </script>
+</body>
+</html>

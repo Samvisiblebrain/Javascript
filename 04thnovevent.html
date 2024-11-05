@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 2px solid black;
+            height: 300px;
+            width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <p id="abs">Click</p>
+    <div>Hellow World</div><br><br>
+    <div id="amc">On Mouse Enter</div>
+    <div id="ads">Mouse Leave</div>
+    <div id="als">Mouse Move</div>
+    <div id="aim">Like Leave</div>
+    <div id="aux">Over</div>
+    <div id="mkl">Mouse Up</div>
+    <div id="ckl">Mouse Wheel</div>
+
+    <script>
+        let btn=document.querySelector("p");
+        btn.onclick=()=>{
+            alert("click");
+        }   
+    </script>
+
+
+    <script>
+        let dio=document.querySelector("div");
+        dio.onmousedown=()=>{
+            alert("Inside");
+        }
+    </script>
+
+    <script>
+        let dil=document.getElementById("amc");
+        dil.onmouseenter=()=>{
+            alert("Enter");
+        }
+    </script>
+     <script>
+            let dim=document.getElementById("ads");
+            dim.onmouseleave=()=>{
+                alert("Leave");
+            }
+    </script>
+    <script>
+            let dix=document.getElementById("als");
+            dix.onmousemove=()=>{
+                alert("Movement");
+            }
+    </script>
+
+    <script>
+        let diu=document.getElementById("aim");
+        diu.onmouseout=()=>{
+            alert("Outside");
+        }
+    </script>
+
+    <script>
+        let din=document.getElementById("aux");
+        din.onmouseover=()=>{
+            alert("Over");
+        }
+    </script>
+        <script>
+            let duc=document.getElementById("mkl");
+            duc.onmouseup=()=>{
+                alert("Mouse Up");
+            }
+        </script>
+         <script>
+                    let duy=document.getElementById("ckl");
+                    duy.onmousewheel=()=>{
+                        alert("Mouse Wheel");
+                    }
+         </script>
+
+
+</body>
+</html>
