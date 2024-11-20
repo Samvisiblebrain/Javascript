@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="post" name="nm">
+        <label>weather</label>
+        <select name="sel" >
+            <option value="win">winter</option>
+            <option value="sun">sunny</option>
+            <option value="rin">rain</option>
+            <option value="aut">autumn</option>
+            <option value="sar">Sardi</option>
+            <option value="gar">Garmmi</option>
+        </select>
+        <input type="button" value="submit" onclick="haha()">
+        <p id="result"></p>
+    </form>
+    <script>
+        function haha(){
+            var a=document.nm.sel.value;
+            if(a=="win"){
+            document.getElementById("result").innerHTML = "winter";
+            document.querySelector("#result").style.color="blue"
+        }else if(a=="sun"){
+            document.getElementById("result").innerHTML ="sunny";
+            document.querySelector("#result").style.color="red"
+        }else if(a=="rin"){
+            document.getElementById("result").innerHTML = "rain";
+            document.querySelector("#result").style.color="aqua"
+        }else if(a=="aut"){
+            document.getElementById("result").innerHTML = "autumn";
+            document.querySelector("#result").style.color="orenge"
+        }else if(a=="sar"){
+            document.getElementById("result").innerHTML = "Sardi";
+            document.querySelector("#result").style.color="pink"
+        }else if(a=="gar"){
+            document.getElementById("result").innerHTML = "Garmmi";
+            document.querySelector("#result").style.color="red"
+        }else{
+            alert("not found")
+        }
+    }
+    </script>
+</body>
+</html>
