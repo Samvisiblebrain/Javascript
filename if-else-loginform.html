@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        #btn {
+            position: absolute;
+            top: 14%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        form {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form name="enter">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username"><br><br>
+        
+        <label for="pass">Password:</label>
+        <input type="password" name="pass" id="pass"><br><br>
+        
+        <input type="button" name="btn" id="btn" value="Login" onclick="log()">
+        
+        <p id="result"></p>
+    </form>
+
+    <script>
+        function log() {
+            var username = document.getElementById("username").value;
+            var pass = document.getElementById("pass").value;
+            var result = document.getElementById("result");
+
+            result.innerHTML = "";
+
+            if (username !== "" && pass !== "") {
+                if (username == "admin" && pass == "123") {
+                    result.innerHTML = "Welcome Admin";
+                    result.style.color = "green";
+                } else if (username == "admin" && pass !== "123") {
+                    result.innerHTML = "Wrong password";
+                    result.style.color = "red";
+                } else if (username !== "admin" && pass == "123") {
+                    result.innerHTML = "Wrong username";
+                    result.style.color = "red";
+                } else if (username !== "admin" && pass !== "123") {
+                    result.innerHTML = "Wrong username and password";
+                    result.style.color = "red";
+                }
+            } else {
+                result.innerHTML = "Please enter both username and password";
+                result.style.color = "orange";
+            }
+        }
+    </script>
+</body>
+</html>

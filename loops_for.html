@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loops For</title>
+</head>
+<body>
+ 
+    <form method="post" name="table">
+        <input type="text" name="nm" id="usersentries">
+        <input type="submit" name="btn" value="Get Table" onclick="tabulation()">
+    </form>
+    <div id="result"></div>
+    <script>
+        function tabulation() {
+            var num = document.getElementById("usersentries").value;
+            for (var i = 1; i <= 10; i++) 
+            document.write((num * i) + "<br>");
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>

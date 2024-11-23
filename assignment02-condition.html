@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment - Conditon</title>
+</head>
+<body>
+    <form method="post" name="student">
+    <input type="text" name="marks" id="inputfield">
+    <input type="button" onclick="grade()" value="View Result">
+    <p id="result"></p>
+    </form>
+    <script>
+             var userInput = prompt("Please enter a number:");
+                var number = parseInt(userInput);
+
+                if (isNaN(number)) {
+                    alert("That's not a valid number!");
+                } else {
+                    if (number % 5 === 0) {
+                        alert(number + " is Multiplied by 5.");
+                    } else {
+                        alert(number + " is not Multiplied by 5.");
+
+                    }
+                }
+    </script>
+    <script>
+         function grade(){
+            var a = document.student.marks.value;
+            if(a=="90-100"){
+            document.getElementById("result").innerHTML = "A";
+            document.querySelector("#result").style.color="Green"
+        }else if(a=="70-89"){
+            document.getElementById("result").innerHTML ="B";
+            document.querySelector("#result").style.color="Blue"
+        }else if(a=="60-69"){
+            document.getElementById("result").innerHTML = "C";
+            document.querySelector("#result").style.color="Orange"
+        }else if(a=="50-59"){
+            document.getElementById("result").innerHTML = "D";
+            document.querySelector("#result").style.color="Yellow"
+        }else if(a=="0-49"){
+            document.getElementById("result").innerHTML = "F";
+            document.querySelector("#result").style.color="Red"
+        }
+        else{
+            alert("not found")
+        }
+    }
+    </script>
+</body>
+</html>
