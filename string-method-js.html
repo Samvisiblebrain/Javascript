@@ -9,11 +9,12 @@
     <script>
         var str = "admin";
         var a = str.toUpperCase();
-        console.log(a);
+        document.write("<br>" + a);
+        document.write("<br>");
 
         var str1 = "Admin"
         var b = str1.toLowerCase();
-        document.write(b);
+        document.write("<br>" +  b);
 
 
         document.write("<br>");
@@ -27,6 +28,19 @@
 
         var newlength = a.length;
         document.write(newlength);
+
+
+        // str.slice(start. end?)
+        var a = "California";
+       var h= a.slice(1,5)
+        document.write("<br>");
+        document.write(h);
+
+        var firstname = "Santosh ";
+        var lastname = "Kumar";
+        var fullname = firstname.concat(lastname);
+        document.write("<br>" + "<br>" + "Concat Function Output");
+        document.write("<br>" + fullname);
     </script>
 </body>
 </html>
