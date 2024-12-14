@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String   - Template literals</title>
+</head>
+<body>
+    <script>
+        let str = "Santosh";
+        var a ="Santosh";
+        document.write(a.length);
+        document.write("<br>")
+
+
+        var firstname = "Santosh"
+        var lastname = "Kumar"
+        
+        document.write("My name is " + firstname + "<br>" + "<br>" + "My Last name is " +  lastname );
+        document.write()
+
+        var firstname = "Santosh"
+        var lastname = "Kumar"
+        
+        document.write(` <br><br> My first name is ${firstname} <br><br> And <br><br> My last name is ${lastname}`);
+
+        document.write("<br>" + "<br>" + "Variable and Expressions")
+        document.write("<br>")
+        document.write(`Addition of 5,2 is ${5+2}`);
+
+        document.write("<br>" + "<br>" + "Object" + "<br>")
+        
+        var obj = {
+            product: "Pen",
+            price: 10
+        }
+        document.write(`price of ${obj.product} is ${obj.price}`);
+
+
+        document.write("<br>" + "<br>" + "Escape Characters")
+            //   /n = new line
+            //   /t = Tab
+              console.log("Hi \n Hello");
+              console.log("Hi \t Hello");
+
+    </script>
+</body>
+</html>

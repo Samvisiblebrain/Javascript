@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Count</title>
+</head>
+<body>
+
+    <h2>Vowel Count using Arrow Function</h2>
+    
+    <label for="wordInput">Enter a word: </label>
+    <input type="text" id="wordInput" placeholder="Enter a word" />
+        <button onclick="countVowels()">Count Vowels</button>
+    
+    <p id="result"></p>
+
+    <script>
+        var vowel = (santosh) => {
+            return [...santosh].filter(char => 'aeiouAEIOU'.includes(char)).length;
+        };
+
+        function countVowels() {
+            var userInput = document.getElementById("wordInput").value;
+            if (userInput) {
+                var vowelCount = vowel(userInput);
+                document.getElementById("result").innerHTML = "The number of vowels in '" + userInput + "' is: " + vowelCount;
+            } else {
+                document.getElementById("result").innerHTML = "Please enter a word!";
+            }
+        }
+    </script>
+
+</body>
+</html>

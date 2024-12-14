@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+            .calculator {
+                max-width: 440px;
+                margin: 20px auto;
+                padding: 20px;
+                border: 4px solid #444;
+                border-radius: 12px;
+                box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+                background-color: #1e1e1e;
+            }
+
+            .calculator input[type="text"] {
+                height: 60px;
+                font-size: 1.75rem;
+                text-align: right;
+                color: #fff;
+                background-color: #333;
+                border: 2px solid #555;
+                border-radius: 8px;
+            }
+
+            .calculator input[type="button"] {
+                height: 60px;
+                font-size: 1.5rem;
+                border-radius: 8px;
+            }
+
+            .btn-block {
+                padding: 0;
+            }
+
+            h3 {
+                color: #f39c12;
+                font-weight: bold;
+            }
+
+            .btn-danger {
+                background-color: #e74c3c;
+                border-color: #e74c3c;
+            }
+
+            .btn-danger:hover {
+                background-color: #c0392b;
+                border-color: #c0392b;
+            }
+
+            .btn-secondary {
+                background-color: #7f8c8d;
+                border-color: #7f8c8d;
+            }
+
+            .btn-secondary:hover {
+                background-color: #626e70;
+                border-color: #626e70;
+            }
+
+            .btn-light {
+                background-color: #ecf0f1;
+                border-color: #ecf0f1;
+            }
+
+            .btn-light:hover {
+                background-color: #bdc3c7;
+                border-color: #bdc3c7;
+            }
+
+            .btn-primary {
+                background-color: #3498db;
+                border-color: #3498db;
+            }
+
+            .btn-primary:hover {
+                background-color: #2980b9;
+                border-color: #2980b9;
+            }
+
+            .form-group {
+                margin-bottom: 20px;
+            }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="calculator">
+            <h3 class="text-center mb-4">Calculator</h3>
+            <form id="calc-form" name="formm">
+                <div class="form-group">
+                    <input type="text" class="form-control" name="displayy"  >
+                </div>
+                <div class="form-row">
+                    <div class="col-3 mb-2"><input type="button" class="btn btn-danger btn-block" value="C" onclick="clearDisplay()"></input></div>
+                    <div class="col-3 mb-2"><input type="button" class="btn btn-secondary btn-block" value="÷" onclick="cal('÷')"></input></div>
+                    <div class="col-3 mb-2"><input type="button" class="btn btn-secondary btn-block" value="×" onclick="cal('+')"></input></div>
+                    <div class="col-3 mb-2"><input type="button" class="btn btn-secondary btn-block" value="DEL" onclick="backspace()" ></input></div>
+                </div>
+                <div class="form-row">
+                    <div class="col-3 mb-2"><input type="button" class="btn btn-light btn-block" value="7" onclick="cal('7')"></input></div>
+                    <div class="col-3 mb-2"><input type="button" class="btn btn-light btn-block" value="8" onclick="cal('8')"></input></div>
+                    <div class="col-3 mb-2"><input type="button" class="btn btn-light btn-block" value="9" onclick="cal('9')"></input></div>
+                    <div class="col-3 mb-2"><input type="button" class="btn btn-secondary btn-block" value="−" onclick="cal('-')"></input></div>
+                </div>
+                <div class="form-row">
+                    <div class="col-3 mb-2"><input type="button" class="btn btn-light btn-block" value="4" onclick="cal('4')"></input></div>
+                    <div class="col-3 mb-2"><input type="button" class="btn btn-light btn-block" value="5" onclick="cal('5')"></input></div>
+                    <div class="col-3 mb-2"><input type="button" class="btn btn-light btn-block" value="6" onclick="cal('6')"></input></div>
+                    <div class="col-3 mb-2"><input type="button" class="btn btn-secondary btn-block" value="+" onclick="cal('+')">+</input></div>
+                </div>
+                <div class="form-row">
+                    <div class="col-3 mb-2"><input type="button" class="btn btn-light btn-block" value="1" onclick="cal('1')"></input></div>
+                    <div class="col-3 mb-2"><input type="button" class="btn btn-light btn-block" value="2" onclick="cal('2')"></input></div>
+                    <div class="col-3 mb-2"><input type="button" class="btn btn-light btn-block" value="3" onclick="cal('3')"></input></div>
+                    <div class="col-3 mb-2"><input type="button" class="btn btn-primary btn-block" value="=" onclick="eql()"></input></div>
+                </div>
+                <div class="form-row">
+                    <div class="col-6 mb-2"><input type="button" class="btn btn-light btn-block" value="0" onclick="cal('0')"></input></div>
+                    <div class="col-6 mb-2"><input type="button" class="btn btn-light btn-block" value="." onclick="cal('.')"></input></div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script>
+        function cal(val){
+            document.formm.displayy.value = document.formm.displayy.value+val;
+        }
+
+        function eql(){
+            var a = document.formm.displayy.value;
+            document.formm.displayy.value = eval(a);
+          }
+          function clearDisplay(){
+            document.formm.displayy.value="";
+          }
+          function backspace() {
+            document.formm.displayy.value = document.formm.displayy.value.slice(0, -1);
+        }
+    </script>
+</body>
+</html>

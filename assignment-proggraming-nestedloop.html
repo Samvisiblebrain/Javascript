@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment nested loop</title>
+</head>
+<body>
+    <script>
+ 
+        document.write('Number 3', "<br>");
+        document.write("<br>")
+
+        for (let i = 1; i <= 5; i++) {
+            document.write('&nbsp&nbsp'.repeat(5 - i) + '*'.repeat(i));
+            document.write("<br>")
+        }
+
+
+
+        document.write("<br>")
+        document.write('Number 4', "<br>");
+        document.write("<br>") 
+        let charCode = 65; // ASCII code for 'A'
+
+        for (var i = 1; i <=4; i++) {
+            var row = '';
+            for (var j = 1; j <= i; j++) {
+                row += String.fromCharCode(charCode);
+                charCode++;
+            }
+            document.write(row);
+            document.write("<br>")
+        }
+
+        
+        document.write("<br>")
+        document.write('Number 5', "<br>");
+        document.write("<br>") 
+        for (let i = 1; i <= 5; i++) {
+            let trigle = '';
+            for (let j = 1; j <= 5 - i; j++) trigle += '&nbsp;&nbsp;';
+            for (let k = 1; k <= 2 * i - 1; k++) trigle += '*';
+            document.write(trigle + '<br>');
+            }
+
+        document.write("<br>")
+        document.write('Number 6', "<br>");
+        document.write("<br>") 
+        for (let i = 1; i <= 5; i++) {
+            let spaces = '';
+            let stars = '';
+            
+            for (let j = 1; j < i; j++) {
+                spaces += '';
+            }
+            
+            for (let k = 1; k <= 2 * (5 - i) + 1; k++) {
+                stars += '*';
+            }
+            document.write(spaces + stars + '<br>');
+        }
+
+
+        document.write("<br>")
+        document.write('Number 7', "<br>");
+        document.write("<br>") 
+        for (let i = 1; i <= 5; i++) {
+        let doller = '';
+        for (let j = 1; j <= i; j++) {
+            doller += '$';
+        }
+        document.write(doller);
+        document.write("<br>")
+    }
+
+    document.write("<br>")
+        document.write('Number 8', "<br>");
+        document.write("<br>") 
+        for (let i = 1; i <= 5; i++) {
+        let doller = '';
+        for (let j = 1; j <= i; j++) {
+            doller += '%';
+        }
+        document.write(doller);
+        document.write("<br>")
+    }
+
+
+    document.write('Number 9', "<br>");
+        document.write("<br>")
+
+        for (let i = 1; i <= 1; i++) {
+            for( let p = 1; p<=5; p++){
+                document.write("&nbsp;&nbsp;"+"*")
+                
+            }
+            document.write("<br>")
+        }
+        for (let i = 1; i <= 3; i++) {
+            for( let m = 1; m<=5; m++){
+                if(m == 1){
+                    document.write("&nbsp;&nbsp;"+"*");
+                }else{
+                    document.write("&nbsp;&nbsp;&nbsp;");
+                }
+                if(m==5){
+                    document.write("&nbsp;&nbsp;"+ "*");
+                }
+                    
+                
+                }
+                document.write("<br>");
+            }
+            for (let i = 1; i <= 1; i++) {
+            for( let p = 1; p<=5; p++){
+                document.write("&nbsp;&nbsp;"+"*")
+                
+            }
+            document.write("<br>")
+        }
+</script>
+</body>
+</html>

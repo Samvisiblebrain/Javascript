@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for (let i = 5; i >= 1; i--){
+            let star = '';
+            for (let j = 1; j<=i; j++){
+            document.write("*");}
+            document.write("<br>");
+        }
+
+        for (let i = 5; i >= 1; i--) {
+            let spaces = "&nbsp;&nbsp;";
+            for (let j = 1; j <= 5 - i; j++) {
+                spaces += "&nbsp;&nbsp;";
+            }
+
+            let stars = "*".repeat(i);
+            document.write(spaces + stars + "<br>");
+        }
+
+
+</script>
+
+
+        <script>
+            for (let i = 1; i <= n; i++) {
+                let line = "";  
+                for (let spaces = 1; spaces <= n - i; spaces++) {
+                    line += "&nbsp;";  
+                for (let stars = 1; stars <= i; stars++) {
+                    line += "*";  
+                }
+                document.write(line + "<br>"); 
+            }
+        }
+        </script>
+</body>
+</html>

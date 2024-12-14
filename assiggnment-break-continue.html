@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Break and Contunue</title>
+</head>
+<body>
+    <script>
+
+        document.write("Q1")
+        document.write("<br>")
+        document.write("<br>")
+
+        var odd_count = 0;
+        for(var i = 100; i <= 200; i++){
+            
+            if (i % 2 == 0) {
+                    continue;
+                }
+                odd_count++;
+                if (odd_count == 6) {
+                    break;
+                }    
+                document.write(i);
+                document.write("<br>");
+        }
+        document.write("<br>")
+            document.write("Q2")
+            document.write("<br>")
+            document.write("<br>")
+            
+            for(var i = 1; i <= 6; i++){
+                for (var j = 1; j<=i; j++){
+                document.write("*");}
+                document.write("<br>");
+            }
+            
+        </script>
+</body>
+</html>
