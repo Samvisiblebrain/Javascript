@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function checkString(s) {
+        if (s.startsWith("Hi") && s.endsWith("All")) {
+            return "Match";
+        }
+        return "Not Match";
+        }
+
+        var input = prompt("Enter a string:");
+        document.write(checkString(input));
+    </script>
+</body>
+</html>
