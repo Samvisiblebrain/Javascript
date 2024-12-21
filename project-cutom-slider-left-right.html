@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Price Range Slider with Filled Track</title>
+  <style>
+    body {
+      background-color: #f9f9f9;
+      font-family: Arial, sans-serif;
+      padding: 50px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #eef2f7;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #34495e;
+    }
+
+    .output {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    .form-control {
+      width: 45%;
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .slider-container {
+      position: relative;
+      height: 40px;
+    }
+
+    .slider-track {
+      position: absolute;
+      height: 8px;
+      width: 100%;
+      background: #ddd;
+      border-radius: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .slider-fill {
+      position: absolute;
+      height: 8px;
+      background: #3498db;
+      border-radius: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      width: 100%;
+      position: absolute;
+      background: none;
+      pointer-events: none;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 20px;
+      width: 20px;
+      background: #3498db;
+      border-radius: 50%;
+      cursor: pointer;
+      pointer-events: all;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    }
+
+    input[type="range"]::-moz-range-thumb {
+      height: 20px;
+      width: 20px;
+      background: #3498db;
+      border-radius: 50%;
+      cursor: pointer;
+      pointer-events: all;
+      box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h2>CUSTOM PRICE RANGE SLIDER</h2>
+
+    <div class="output">
+      <input type="number" class="form-control" id="minPrice" value="500" min="0" max="1000">
+      <input type="number" class="form-control" id="maxPrice" value="800" min="0" max="1000">
+    </div>
+
+    <div class="slider-container">
+      <div class="slider-track"></div>
+      <div class="slider-fill" id="sliderFill"></div>
+      <input type="range" id="minRange" min="0" max="1000" value="500">
+      <input type="range" id="maxRange" min="0" max="1000" value="800">
+    </div>
+  </div>
+
+  <!-- <script>
+    const minRange = document.getElementById('minRange');
+    const maxRange = document.getElementById('maxRange');
+    const minPrice = document.getElementById('minPrice');
+    const maxPrice = document.getElementById('maxPrice');
+    const sliderFill = document.getElementById('sliderFill');
+
+    function updateSlider() {
+      const min = parseInt(minRange.value);
+      const max = parseInt(maxRange.value);
+      const range = parseInt(minRange.max) - parseInt(minRange.min);
+
+      // Calculate percentages
+      const minPercent = (min / range) * 100;
+      const maxPercent = (max / range) * 100;
+
+      // Update fill position and width
+      sliderFill.style.left = minPercent + '%';
+      sliderFill.style.width = (maxPercent - minPercent) + '%';
+
+      // Update number inputs
+      minPrice.value = min;
+      maxPrice.value = max;
+    }
+
+    // Event listeners for sliders
+    minRange.addEventListener('input', () => {
+      if (parseInt(minRange.value) > parseInt(maxRange.value)) {
+        minRange.value = maxRange.value;
+      }
+      updateSlider();
+    });
+
+    maxRange.addEventListener('input', () => {
+      if (parseInt(maxRange.value) < parseInt(minRange.value)) {
+        maxRange.value = minRange.value;
+      }
+      updateSlider();
+    });
+
+    // Event listeners for number inputs
+    minPrice.addEventListener('input', () => {
+      minRange.value = minPrice.value;
+      updateSlider();
+    });
+
+    maxPrice.addEventListener('input', () => {
+      maxRange.value = maxPrice.value;
+      updateSlider();
+    });
+
+    // Initialize the slider fill on page load
+    updateSlider();
+  </script> -->
+
+</body>
+</html>

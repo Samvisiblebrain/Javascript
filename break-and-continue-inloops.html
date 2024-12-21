@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Break and Continue in Loops</title>
+</head>
+<body>
+    <script>
+        document.write("Break in loop"+"<br>");
+        for (var i = 1; i<=10; i++){
+            if (i==5){
+                break;
+            }
+            document.write(i);
+            document.write("<br>");
+        }
+
+    </script>
+
+    <script>
+        document.write("Continue in loop:"+"<br>");
+        for (var i = 1; i<=10; i++){
+            if (i==5){
+                continue;
+            }
+            document.write(i);
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>

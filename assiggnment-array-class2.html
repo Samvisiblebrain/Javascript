@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Assignment</title>
+</head>
+<body>
+    <script>
+            let marks = [85, 97, 44, 37, 76, 60];
+
+            let sum = 0;
+            for (let mark of marks) sum += mark;
+
+            let average = sum / marks.length;
+            let percentage = (sum / (marks.length * 100)) * 100;
+
+            console.log(`Total: ${sum}`);
+            console.log(`Average: ${average.toFixed(2)}`);
+            console.log(`Percentage: ${percentage.toFixed(2)}%`);
+
+
+    </script>
+</body>
+</html>
