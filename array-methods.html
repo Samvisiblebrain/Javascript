@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+
+        <h1>JavaScript Arrays</h1>
+
+        <p id="demo"></p>
+        <p id="demo2"></p><br>
+        <p id="demo3"></p><br>
+        <p id="demo4"></p><br>
+
+
+    <script>
+        document.write("<br>" + "<p> 1. The length property returns the length of an array:</p>")
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let size = fruits.length;
+
+        document.getElementById("demo").innerHTML = size;
+
+
+        document.write("<br>" + "<p> 2. The toString() method returns an array as a comma separated string:</p>" + "<br>")
+        const fruit = ["Banana", "Orange", "Apple", "Mango"];
+
+        document.getElementById("demo2").innerHTML = fruit.toString();
+
+        document.write("<br>" + "<p> 3. The at() method returns an indexed element from an array:</p>" + "<br>")
+        const fal = ["Banana", "Orange", "Apple", "Mango"];
+        let flafal = fal.at(2);
+
+        document.getElementById("demo3").innerHTML = flafal;
+
+        document.write("<br>" + "<p> 4. The at() method returns an indexed element from an array:</p>" + "<br>")
+        const frui = ["Banana", "Orange", "Apples", "Mango"];
+        let fr = frui.at(2);
+
+        document.getElementById("demo4").innerHTML = fr;
+    </script>
+
+
+    
+</body>
+</html>

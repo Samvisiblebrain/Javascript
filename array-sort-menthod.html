@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Sort Methods</title>
+</head>
+<body>
+    <script>
+    
+    var fruits = ["Banana", "Orange", "Lichi", "Papaya"];
+        // document.getElementById("demo1").innerHTML = fruits;
+
+        // fruits.sort();
+        fruits.reverse();
+        document.write("Reverse: "+ fruits);
+        document.write("<br>");
+
+        document.write("<br>");
+        var frts = ["Banana", "Orange", "Lichi", "Papaya"];
+        frts.sort();
+        document.write(frts);
+
+
+        document.write("<br>");
+        var points = [40, 100, 1, 5, 25, 10];
+
+        points.sort();
+        document.write(points);
+
+
+        document.write("Numeric Sort: "+"<br>"+"<br>");
+        const poin = [40, 100, 1, 5, 25, 10];
+        poin.sort(function(a, b){return b - a});
+        // poin.sort(function(a, b){return a - b}); reverse
+        document.write(poin);
+    </script>
+</body>
+</html>

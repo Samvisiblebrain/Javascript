@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puch Pop - Methods</title>
+</head>
+<body>
+    <script>
+        var arr = ["Mango", "Orange", "Papaya", "Litchi"];
+            arr.push("Kiwi");
+            document.write(arr);
+            document.write("<br>");
+
+
+    </script>
+        <script>
+            var arr = ["Mango", "Orange", "Papaya", "Litchi"];
+                // arr.push("Kiwi");
+                arr.pop("");
+                document.write(arr);
+
+                var arr = [ "manogo", "Orange", "Papaya", "Lichi"];
+                document.write("<br>");
+                document.write("<br>");
+                document.write("Array Data Type:"  + "<br>");
+                document.write(typeof(arr)); 
+    
+    
+        </script>
+
+        <script>
+            
+            var abc = ["Mango", "Orange", "Papaya", "Litchi"];
+                var xyz = abc.toString();
+                document.write("Array Data Type:"  + "<br>" + xyz);
+
+            var ayl = ["Mango", "Orange", "Papaya", "Litchi"];
+                document.write("<br>");
+                document.write("<br>");
+                document.write(arr.at(2));
+
+            var acl = ["Mango", "Orange", "Papaya", "Litchi"];
+
+                // acl.join("Hi");
+                document.write("<br>");
+                document.write("<br>");
+                document.write( acl.join("Hi"));
+
+            var all = ["Mango", "Orange", "Papaya", "Litchi"];
+
+                all.shift();
+                document.write("<br>");
+                document.write("<br>");
+                document.write(all);
+
+            var alu = ["Mango", "Orange", "Papaya", "Litchi"];
+
+                alu.unshift("Kiwi");
+                document.write("<br>");
+                document.write("<br>");
+                document.write(alu);
+
+                
+            var mul = ["Mango", "Orange", "Papaya", "Litchi"];
+            var mul1 = ["Kiwi", "Apple", "Watermelon", "Banana"];
+            var mul2 = ["Fruits1", "Fruits2", "Fruits3", "Fruits4"];
+
+                var c =mul.concat(mul1);
+                document.write("<br>");
+                document.write("<br>");
+                document.write(c);
+            var m = mul.concat(mul1, mul2);
+                document.write(m);
+
+            const myarr = [[1,2], [3,4], [5,6]];
+                var alu = myarr.flat();
+                console.log(alu);
+
+
+                var aws = ["Mango","Orange", "Banana", "Lichi"];
+                    // aws.splice(2,0,"Kiwi");
+                    aws.splice(2,2,"Kiwi");
+                    console.log(aws);
+
+                var asp = ["Mango","Orange", "Banana", "Lichi"]
+                    // asp.splice(2);
+                   var zar = asp.slice(1,3);
+                    console.log(asp);
+
+
+
+                var agl = ["Apple", "Orange", "Apple", "Mango"];
+                    var position1 = agl.indexOf("Apple") + 1;
+
+                    document.write("<br>"+ "<br>" + "Index Off Apple is found in position:" + position1);    
+
+
+
+               var amp = ["Apple", "Orange", "Apple", "Mango"];
+                var position2 = amp.lastIndexOf("Apple") + 1;
+                document.write("<br>" + "<br>" + "Apple is found in position lastIndexOf: " + position2);
+
+
+
+              var agp = ["Banana", "Orange", "Apple", "Mango"];
+                var aql = agp.includes("Mango");
+                document.write("<br>"+"<br>"+"Check if the fruit array contains Mango: " + aql)
+
+
+
+            // var fry = ["Banana", "Orange", "Apple", "Mango"];
+            //     var first1 = fry.find(myFunction);
+
+            //     document.write("<br>" + "<br>" + "First number Apple is " + first1);
+
+            //     function myFunction(value, index, array) {
+            //     return value =  `Apple`;
+            //     }
+
+
+            var fry = ["Banana", "Orange", "Apple", "Mango"];
+            var first1 = fry.find(myFunction);
+
+            document.write("<br><br>Yes its Available: " + first1);
+
+            function myFunction(value, index, array) {
+                return value === 'Apple'; // Use === for comparison
+            }
+
+        </script>
+</body>
+</html>

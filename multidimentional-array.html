@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multidimensional Array</title>
+</head>
+<body>
+    <table border="2px" cellspacing="0" cellpadding="20">
+        <tr>Personal Details
+            <td>
+                Student Name
+            </td>
+            <td>
+                Father Name
+            </td>
+            <td>
+                Mother Name
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+            <td>
+
+            </td>
+        </tr>
+    </table>
+    <!-- <script>
+        // var  arr = [
+        //     [30, 20, 40],
+        //     [70, 30, 90],
+        //     [90, 31, 32]
+        // ];
+        // document.write(arr[1][2]);
+
+        var det = [ 
+                      [Lov, Shyam, Sham],
+                      [Ram, Sita], //Father Mother Name Lov
+                      [Krishn, Radha], //Father Mother Name Shyam
+                      [NaredraModi, Abc] //Father Mother Name Sham
+        ];
+
+    </script> -->
+
+
+
+    <script>
+        var det = [ 
+            ["Lov", "Shyam", "Sham"],      // Student names
+            ["Ram", "Sita"],              // Father and Mother names for "Lov"
+            ["Krishn", "Radha"],          // Father and Mother names for "Shyam"
+            ["NaredraModi", "Abc"]        // Father and Mother names for "Sham"
+        ];
+
+        var rows = document.querySelectorAll("table tr");
+        for (var i = 1; i < rows.length; i++) { 
+            var cells = rows[i].querySelectorAll("td");
+            cells[0].innerHTML = det[0][i - 1]; 
+            cells[1].innerHTML = det[i][0];
+            cells[2].innerHTML = det[i][1];
+        }
+    </script>
+</body>
+</html>

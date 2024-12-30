@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Quiz</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container my-5">
+        <h1 class="text-center mb-4">HTML Quiz</h1>
+        <h2 class="text-center mb-4">Santosh <br><p style="font-size: small;">Project - Using - HTML, CSS, Bootstrap, JavaScript</p></h2>
+
+        <div class="progress mb-4">
+            <div id="progress-bar" class="progress-bar progress-bar-striped bg-info" 
+                 role="progressbar" style="width: 0%;"  
+                 aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+                0%
+            </div>
+        </div>
+
+        <div id="quiz-container" class="card p-4">
+            <div id="question-container" class="mb-3">
+                <h4 id="question-text" class="text-primary"></h4>
+                <div id="options-container" class="mt-3"></div>
+            </div>
+            <div class="d-flex justify-content-between">
+                <button id="prev-btn" class="btn btn-secondary" disabled>Previous</button>
+                <button id="next-btn" class="btn btn-primary">Next</button>
+            </div>
+        </div>
+
+        <div id="summary-container" class="text-center mt-5 d-none">
+            <h3>Quiz Summary</h3>
+            <p id="score-text"></p>
+            <div id="feedback-list" class="mt-3"></div>
+            <button id="restart-btn" class="btn btn-success mt-4">Restart Quiz</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
