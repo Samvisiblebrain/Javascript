@@ -12,6 +12,12 @@
 
     <p id="demo1"></p>
     <p id="demo3"></p>
+    <p id="demo4"></p>
+    <p>The every() method checks if all array values pass a test.</p>
+
+    <p id="demo6"></p>
+    <p id="demo7"></p>
+    <p id="demo8"></p>
 
 
     <script>
@@ -38,13 +44,55 @@
         </script>
         <script>
         var numbe = [9, 15, 30, 20, 11];
-            var 18+ = numbe.filter(myFunction);
+            var eighteenn = numbe.filter(myFunction);
 
-            document.getElementById("demo3").innerHTML = 18+;
+            document.getElementById("demo3").innerHTML = eighteenn;
 
             function myFunction(value, index, array) {
             return value > 18;
             }
+
+
+        const numbers = [45, 4, 9, 16, 25];
+        let sum = numbers.reduce(myFunction);
+
+        document.getElementById("demo4").innerHTML = " Reduce() The sum is " + sum;
+
+        function myFunction(total, value, index, array) {
+        return total + value;
+        }
+
+
+
+        const numberss = [45, 4, 9, 16, 25];
+        let allOver18 = numberss.every(myFunction);
+            if(allOver18){
+                alert("yes");
+            }else{
+                alert("no");
+        }
+        function myFunction(value, index, array) {
+        return value > 18;
+        }
+
+
+
+
+        var myName = Array.from("SANTOSHKUMAR");
+        document.getElementById("demo7").innerHTML = myName;
+
+
+
+        var frutas = ["Banana", "Orange", "Apple", "Mango"];
+        var keys = frutas.keys();
+
+        let text = "";
+        for (let x of keys) {
+        text += x + "<br>"; 
+        }
+
+        document.getElementById("demo8").innerHTML = text;
+
         </script>
 </body>
 </html>

@@ -50,24 +50,34 @@ const scoreText = document.getElementById("score-text");
 const feedbackList = document.getElementById("feedback-list");
 const restartBtn = document.getElementById("restart-btn");
 
-// Load a question dynamically
 function loadQuestion(index) {
     const question = quizQuestions[index];
     questionText.textContent = `${index + 1}. ${question.question}`;
     optionsContainer.innerHTML = "";
 
-    // Load options as buttons
+    // Load options as radio buttons
     question.options.forEach((option, i) => {
-        const button = document.createElement("button");
-        button.textContent = option;
-        button.classList.add("btn", "btn-light");
-        button.onclick = () => selectAnswer(index, i);
+        const optionWrapper = document.createElement("div");
+        optionWrapper.classList.add("form-check");
 
-        // Highlight previously selected answer
-        if (userAnswers[index] === i) {
-            button.classList.add("btn-primary");
-        }
-        optionsContainer.appendChild(button);
+        const input = document.createElement("input");
+        input.type = "radio";
+        input.id = `option-${i}`;
+        input.name = "quiz-option";
+        input.value = i;
+        input.classList.add("form-check-input");
+        if (userAnswers[index] === i) input.checked = true;
+
+        const label = document.createElement("label");
+        label.htmlFor = `option-${i}`;
+        label.textContent = option;
+        label.classList.add("form-check-label");
+
+        optionWrapper.appendChild(input);
+        optionWrapper.appendChild(label);
+        optionsContainer.appendChild(optionWrapper);
+
+        input.addEventListener("change", () => selectAnswer(index, i));
     });
 
     // Update progress and button states

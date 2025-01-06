@@ -2,27 +2,43 @@ body {
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(120deg, #f6d365, #fda085);
     color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
 }
 
 #quiz-container {
+    width: 45%;
+    min-width: 300px;
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+    background-color: white;
+    border-radius: 8px;
 }
 
 #question-text {
     font-weight: bold;
 }
 
-#options-container button {
-    width: 100%;
-    margin: 5px 0;
+#options-container label {
+    display: block;
     padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
     border-radius: 8px;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: background-color 0.2s, border-color 0.2s;
+    cursor: pointer;
 }
 
-#options-container button:hover {
-    transform: scale(1.05);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+#options-container input[type="radio"] {
+    display: none;
+}
+
+#options-container input[type="radio"]:checked + label {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
 }
 
 .progress {

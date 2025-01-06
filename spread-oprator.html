@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spread Operator</title>
+</head>
+<body>
+    <p id="demo">Spread Operator:</p>
+    <script>
+        var arr1 = ["Mango" , "Orange"];
+        var arr2 = ["Lemon" , "Tomato"];
+        var arr3 = ["Potato" , "Okra"];
+        var shop = [...arr1, ...arr2, ...arr3];
+        document.getElementById("demo").innerHTML = shop;
+    </script>
+</body>
+</html>
