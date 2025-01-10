@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opps-Contructor-Prototype</title>
+</head>
+<body>
+    <script>
+        class Student {
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        eat() {
+            console.log(`${this.name} is eating.`);
+        }
+
+        sleep() {
+            console.log(`${this.name} is sleeping.`);
+        }
+
+        code() {
+            console.log(`${this.name} is coding.`);
+        }
+        }
+
+        const student1 = new Student("Krishna", 20);
+        const student2 = new Student("Vikrant", 22);
+        const student3 = new Student("Shushil", 19);
+        const student4 = new Student("Paras", 21);
+        const student5 = new Student("Santosh", 26);
+        const student6 = new Student("Viren", 20);
+
+        student1.eat();
+        student1.sleep();
+        student1.code();
+
+        student2.eat();
+        student2.sleep();
+        student2.code();
+
+        student3.eat();
+        student3.sleep();
+        student3.code();
+
+        student4.eat();
+        student4.sleep();
+        student4.code();
+
+        student5.eat();
+        student5.sleep();
+        student5.code();
+
+        student6.eat();
+        student6.sleep();
+        student6.code();
+
+    </script>
+</body>
+</html>

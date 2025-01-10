@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+                // Base class
+        class Person {
+        constructor() {
+            this.species = "Homo Species";
+        }
+
+            eat() {
+                document.write("Eating...");
+            }
+
+            sleep() {
+                document.write("<br>Sleeping...");
+            }
+
+            work() {
+                document.write("<br>Working...");
+            }
+            }
+
+            // Derived class Doctor
+            class Doctor extends Person {
+            work() {
+                document.write("<br>I treat patients.");
+            }
+        }
+
+        // Derived class Engineer
+        class Engineer extends Person {
+            work() {
+                document.write("<br>I solve problems using machines.");
+            }
+        }
+
+        // Creating instances of the classes
+        let ab = new Engineer();
+        let xy = new Doctor();
+
+        // Accessing properties and methods
+        ab.species;    // Output: "Homo Spacies"
+        ab.eat();      // Output: "Eating..."
+        ab.sleep();    // Output: "Sleeping..."
+        ab.work();     // Output: "I solve problems using machines."
+
+        // Accessing properties and methods
+        xy.species;    // Output: "Homo Spacies"
+        xy.eat();      // Output: "Eating..."
+        xy.sleep();    // Output: "Sleeping..."
+        xy.work();     // Output: "I solve problems using machines."
+
+    </script>
+</body>
+</html>

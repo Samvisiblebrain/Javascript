@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class User {
+        constructor(name, email) {
+            this.name = name;
+            this.email = email;
+        }
+
+        viewData() {
+            console.log(`${this.name} is able to viewing the website data.`);
+        }
+        }
+
+        class Admin extends User {
+        constructor(name, email) {
+            super(name, email); 
+        }
+
+        editData() {
+            console.log(`${this.name} is now editing the website data.`);
+        }
+        }
+
+        let user1 = new User("John Doe", "hello@hi.com");
+        user1.viewData();
+
+        let admin1 = new Admin("Admin Jane", "hello@hi.com");
+        admin1.viewData();
+        admin1.editData();
+
+            </script>
+</body>
+</html>

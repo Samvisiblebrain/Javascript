@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person {
+        constructor(name) {
+            this.species = "Homo species";
+            this.name = name;
+        }
+
+        eat() {
+            console.log("eat");
+        }
+        }
+
+        class Engineer extends Person {
+        constructor(name) {
+            super(name);
+        }
+
+        work() {
+            super.eat();
+            console.log("Solve Problem, build something");
+        }
+        }
+
+        let ab = new Engineer("Vandna");
+        ab.work(); // This will call the work method, which in turn calls eat.
+    </script>
+</body>
+</html>

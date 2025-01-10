@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+                // Base class
+        class Person {
+        constructor() {
+            console.log("Enter parent constructor");
+            this.species = "Homo Spacies";
+        }
+
+        eat() {
+            console.log("Eating...");
+        }
+        }
+
+        // Derived class Engineer
+        class Engineer extends Person {
+        constructor(branch) {
+            console.log("Enter child constructor");
+            super(); // Invokes the parent class constructor
+            this.branch = branch;
+            console.log("Exit child constructor");
+        }
+
+        work() {
+            console.log("Solve Problems");
+        }
+        }
+
+        // Creating an instance of the Engineer class
+        let ab = new Engineer("CSE");
+
+        // Accessing properties and methods
+        ab.species;    // Output: "Homo Sapiens"
+        ab.eat();      // Output: "Eating..."
+        console.log(ab);
+
+         </script>
+</body>
+</html>

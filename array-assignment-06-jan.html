@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Assignment</title>
+</head>
+<body>
+    <script>
+
+            // Q1
+            var companies = ["Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"];
+
+            companies.shift(); // delete "Bloomberg"
+
+            // Remove Uber and add Ola
+            var indexOfUber = companies.indexOf("Uber");
+            if (indexOfUber !== -1) {
+            companies[indexOfUber] = "Ola";
+            }
+
+            document.write("Updated Companies Array: ", companies);
+
+             // Q2
+            // marks
+            let marks = [97, 64, 32, 49, 99, 96, 78];
+
+            // greater than or equal to 90
+            let topScorers = marks.filter(mark => mark >= 90);
+
+            // topScorers
+            document.write("<br>" + "<br>"+ "Marks of students who scored 90+:", topScorers);
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classe in JS</title>
+</head>
+<body>
+    <!-- <script>
+        class car {
+            stop(){
+                document.write("will stop")
+            }
+            start(){
+                document.write("<br>will Start")
+            }
+        }let ab = new car();
+        ab.stop();
+        ab.start();
+    </script> -->
+    <script>
+        class car {
+            constructor( brand, mileage){
+                console.log("Creating new object");
+                    this.brand  = brand;
+                    this.mileage = mileage; 
+            }
+            start(){
+                console.log("start");
+            }
+            stop(){
+                console.log("stop");
+            }
+        }
+        let defender =  new car ("defender", 13)//1
+                    console.log(defender);
+
+        let lexus = new car ("lexus", 10);
+                    console.log(lexus);
+    </script>
+</body>
+</html>

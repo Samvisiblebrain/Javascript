@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // const employee = {
+        //     calctax(){
+        //         document.write("Tax rate is 10%");
+        //     }
+        // };
+        // const newemp = {
+        //     salary: 50000,
+        // };
+        // const secondemp = {
+        //     salary: 60000,
+        // };
+        // newemp._proto_= employee;
+        // secondemp._proto_=employee;
+        // document.write(newemp.salary);
+        // document.write(newemp.calctax);
+        // document.write("<br>");
+        // document.write(secondemp.salary);
+        // document.write(secondemp.calctax);
+
+        //20% tax rate
+        const employee = {
+            calctax(){
+                console.log("Tax rate is 10%");
+            }
+        };
+        const newemp = {
+            salary: 50000,
+            
+                calctax(){
+                    console.log("Tax is 20%");
+                }
+            
+        };
+        const secondemp = {
+            salary: 60000,
+        };
+        newemp._proto_= employee;
+        secondemp._proto_=employee;
+
+        document.write("newemp.salary");
+        document.write("newemp.calctax");
+        document.write("<br>");
+        document.write("secondemp.salary");
+        document.write("secondemp.calctax");
+
+        
+
+
+
+        </script>
+
+
+
+
+</body>
+</html>

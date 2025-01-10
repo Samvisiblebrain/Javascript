@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filter Array JS</title>
+</head>
+<body>
+    <script>
+        let arr  = [5, 8, 99, 24, 16];
+        let evenArr = arr.filter((val)=>{
+            return val%2===0;
+        });
+        console.log(evenArr)
+
+        let newarr = arr.filter((val)=>{
+            return val>23;
+        });
+
+        console.log(newarr);
+    </script>
+</body>
+</html>
