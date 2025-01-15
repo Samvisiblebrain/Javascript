@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function getData(dataid){
+            console.log("data=",dataid)
+        }
+        getData(123)
+    </script>
+
+
+<script>
+    function getData (dataID){
+        setTimeout(()=>{
+            console.log("data", dataID);
+        },2000);
+    }
+        getData(1);
+        getData(2);
+        getData(3);
+
+    
+</script>
+<script>
+    
+    function getData(dataId, getNextData) {
+            setTimeout(() => {
+                console.log("its called nested callback hell[it is problems]", "data", dataId);
+                if (getNextData) {
+                    getNextData();
+                }
+            }, 2000);
+        }
+        getData(1, () => {
+            getData(2, () => {
+                getData(3, () => {
+                    getData(4);
+                });
+            });
+        });
+</script>
+</body>
+</html>
