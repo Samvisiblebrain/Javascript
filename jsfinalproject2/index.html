@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teddy Bear Phone</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f9f9f9;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .phone {
+            width: 250px;
+            height: 400px;
+            background: #00bcd4;
+            border-radius: 25px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .bear-face {
+            width: 100px;
+            height: 100px;
+            background: #ffcc80;
+            border-radius: 50%;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .bear-face::before,
+        .bear-face::after {
+            content: '';
+            width: 30px;
+            height: 30px;
+            background: #ffcc80;
+            border-radius: 50%;
+            position: absolute;
+            top: -15px;
+        }
+
+        .bear-face::before {
+            left: -25px;
+        }
+
+        .bear-face::after {
+            right: -25px;
+        }
+
+        .bear-face .eyes {
+            width: 10px;
+            height: 10px;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 35px;
+        }
+
+        .bear-face .eyes.left {
+            left: 25px;
+        }
+
+        .bear-face .eyes.right {
+            right: 25px;
+        }
+
+        .bear-face .nose {
+            width: 15px;
+            height: 10px;
+            background: black;
+            border-radius: 50%;
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .button {
+            width: 50px;
+            height: 50px;
+            background: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 18px;
+            font-weight: bold;
+            color: #00bcd4;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+            background: #00acc1;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<div class="phone">
+    <div class="bear-face">
+        <div class="eyes left"></div>
+        <div class="eyes right"></div>
+        <div class="nose"></div>
+    </div>
+
+    <div class="buttons">
+        <div class="button" data-sound="1">1</div>
+        <div class="button" data-sound="2">2</div>
+        <div class="button" data-sound="3">3</div>
+        <div class="button" data-sound="4">4</div>
+        <div class="button" data-sound="5">5</div>
+        <div class="button" data-sound="6">6</div>
+        <div class="button" data-sound="7">7</div>
+        <div class="button" data-sound="8">8</div>
+        <div class="button" data-sound="9">9</div>
+    </div>
+</div>
+<script>
+    const songs = [
+        '_Chal_Chaiya_Ringtone_(by Fringster.com).mp3',
+        'toy_phone.mp3',
+        '_Dhoom_Machale_Toy_Mobile_Tone_Ringtone_(by Fringster.com).mp3'
+    ];
+
+    let currentAudio = null; 
+
+    // Function to play a random song
+    function playRandomSong() {
+        if (currentAudio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0; // Reset song position
+        }
+
+        const randomIndex = Math.floor(Math.random() * songs.length);
+        currentAudio = new Audio(songs[randomIndex]); // Create new audio instance
+        currentAudio.play();
+    }
+
+    // Add click event listener to all buttons
+    document.querySelectorAll('.button').forEach(button => {
+        button.addEventListener('click', playRandomSong);
+    });
+</script>
+
+
+</body>
+</html>
